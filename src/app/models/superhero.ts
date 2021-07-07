@@ -1,9 +1,10 @@
 export interface Superhero {
     id: number;
     name: string;
+    slug: string;
     appearance: Iappearance;
     powerstats: Ipowerstats;
-    
+    biography: Ibiography;
     images: IImages;
 }
 
@@ -26,4 +27,12 @@ interface Ipowerstats {
     power: number;
     speed: number;
     strength: number;
+}
+interface Ibiography {
+    fullName: string;
+    alterEgos: string;
+    placeOfBirth: string;
+    firstAppearance: string;
+    publisher: string;
+    alignment: string;
 }

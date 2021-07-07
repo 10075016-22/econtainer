@@ -9,10 +9,10 @@ import { Superhero } from '../models/superhero';
 export class SuperheroService {
   
   private URL = "https://akabab.github.io/superhero-api/api/all.json";
-  
   constructor(private http: HttpClient) { }
 
   public getSuperHeroes(): Observable<Superhero[]> {
     return this.http.get<Superhero[]>(this.URL);
   }
+
 }

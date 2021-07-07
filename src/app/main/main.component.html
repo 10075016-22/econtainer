@@ -1,5 +1,15 @@
+<div class="row mt-5 justify-content-center mb-3">
+    <div class="col-lg-5">
+        <div class="input-group mb-3">
+        <input type="search" class="form-control" placeholder="Buscar personaje" [(ngModel)]="search">
+        <div class="input-group-prepend">
+            <span class="input-group-text bg-white"><i class="fa fa-search"></i></span>
+        </div>
+        </div>
+    </div>
+</div>
 <div class="row">
-    <div class="col-md-3 mb-3" *ngFor="let item of superheroes">
+    <div class="col-lg-3 mb-3" *ngFor="let item of superheroes | filter:search">
         <div class="card">
             <img src={{item.images.sm}} class="card-img-top" alt={{item.name}}>
             <div class="card-body">
@@ -10,6 +20,9 @@
                 <p class="card-text mb-2">Gender <b>{{ item.appearance.gender}}</b> </p>
                 <p class="card-text mb-2">Race <b>{{ item.appearance.race}}</b> </p>
             </div>
+        </div>
+        <div class="card-footer">
+            <a routerLink="/superheroes/{{item.id}}" >Ver más</a>
         </div>
     </div>
 </div>

@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { DetailsComponent } from './main/details/details.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { DetailsComponent } from './main/details/details.component';
     DetailsComponent
   ],
   imports: [
+    FormsModule,
+    Ng2SearchPipeModule,
     HttpClientModule,
     BrowserModule,
     NgbModule,

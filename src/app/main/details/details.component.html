@@ -1,1 +1,57 @@
-<p>details works!</p>
+<div class="row mt-2" *ngFor="let item of superheroes">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <img src={{item.images.lg}} class="card-img-top" alt="">
+            </div>
+            <div class="card-body">
+               {{item.id}}. {{item.name}}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-text">Information</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p>Slug: {{item.slug}} </p>
+                        <p>powerstats</p>
+                        <ul>
+                            <li>Combat <b>{{item.powerstats.combat}}</b> </li>
+                            <li>Durability <b>{{item.powerstats.durability}}</b> </li>
+                            <li>Intelligence <b>{{item.powerstats.intelligence}}</b> </li>
+                            <li>Power <b>{{item.powerstats.power}}</b> </li>
+                            <li>Speed <b>{{item.powerstats.speed}}</b> </li>
+                            <li>Strength <b>{{item.powerstats.strength}}</b> </li>
+                        </ul>
+                        <p>appearance</p>
+                        <ul>
+                            <li>Gender <b>{{item.appearance.gender}}</b> </li>
+                            <li>Race <b>{{item.appearance.race}}</b> </li>
+                            <li>EyeColor <b>{{item.appearance.eyeColor}}</b> </li>
+                            <li>HairColor <b>{{item.appearance.hairColor}}</b> </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-8">
+                        <p>Biography</p>
+                        <ul>
+                            <li>FullName <b>{{item.biography.fullName}}</b> </li>
+                            <li>Alter Egos <b>{{item.biography.alterEgos}}</b> </li>
+                            <li>Place Of Birth <b>{{item.biography.placeOfBirth}}</b> </li>
+                            <li>First appearance <b>{{item.biography.firstAppearance}}</b> </li>
+                            <li>Publisher <b>{{item.biography.publisher}}</b> </li>
+                            <li>Alignment <b>{{item.biography.alignment}}</b> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <a routerLink="/superheroes" class="btn btn-sm btn-info">Volver</a>
+            </div>
+        </div>
+    </div>
+</div>
