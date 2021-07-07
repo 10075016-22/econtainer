@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-3 mb-3" *ngFor="let item of superheroes">
+        <div class="card">
+            <img src={{item.images.sm}} class="card-img-top" alt={{item.name}}>
+            <div class="card-body">
+                <p class="card-text text-center mb-2"> {{ item.name}} </p>
+                <p class="card-text mb-2">Intelligence <b>{{ item.powerstats.intelligence}}</b> </p>
+                <p class="card-text mb-2">Speed <b>{{ item.powerstats.speed}}</b> </p>
+                <p class="card-text mb-2">Power <b>{{ item.powerstats.power}}</b> </p>
+                <p class="card-text mb-2">Gender <b>{{ item.appearance.gender}}</b> </p>
+                <p class="card-text mb-2">Race <b>{{ item.appearance.race}}</b> </p>
+            </div>
+        </div>
+    </div>
+</div>
